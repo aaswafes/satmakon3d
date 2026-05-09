@@ -37,14 +37,14 @@ export function Cta() {
 
         <Reveal delay={0.42} className="mt-12">
           <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-3">
-            <MagneticButton href="https://t.me/satmakon_admin" variant="primary" size="lg">
+            <MagneticButton href="https://t.me/satmakonn_bot" variant="primary" size="lg">
               {t.cta.ctaPrimary}
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
             </MagneticButton>
-            <MagneticButton href="https://t.me/satmakon_admin" variant="ghost" size="lg">
+            <MagneticButton href="https://makonbook-sat-itqub.ondigitalocean.app/sat/guest/" variant="ghost" size="lg">
               {t.cta.ctaSecondary}
             </MagneticButton>
           </div>

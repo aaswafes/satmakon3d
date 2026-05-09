@@ -62,7 +62,7 @@ export function Stats() {
 
   const numbers = [
     { value: 300, suffix: "+", labelKey: 0 },
-    { value: 28, suffix: "%", labelKey: 1 },
+    { value: 30, suffix: "%", labelKey: 1 },
     { value: 1600, suffix: "", labelKey: 2 },
   ];
 

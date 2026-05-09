@@ -53,13 +53,28 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-[13px] text-bone/75">
               <li>
-                <a href="https://t.me/satmakon_admin" className="hover:text-bone transition-colors">
+                <a href="tel:+998555111600" className="hover:text-bone transition-colors">
+                  +998 55 511 16 00
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/satmakonn_bot" className="hover:text-bone transition-colors">
+                  @satmakonn_bot
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/sat_makon_uz" className="hover:text-bone transition-colors">
                   Telegram
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@satmakon.uz" className="hover:text-bone transition-colors">
-                  hello@satmakon.uz
+                <a href="https://www.instagram.com/sat_makon_uz" className="hover:text-bone transition-colors">
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://youtube.com/@sat_makon_uz" className="hover:text-bone transition-colors">
+                  YouTube
                 </a>
               </li>
             </ul>

@@ -17,38 +17,38 @@ export const DEFAULT_LOCALE: Locale = "uz";
 
 const uz = {
   nav: {
-    product: "Dasturlar",
+    product: "SAT",
     howItWorks: "Jarayon",
     results: "Natijalar",
     pricing: "Tariflar",
     faq: "Savollar",
-    bookAudit: "Bepul mock",
+    bookAudit: "Boshlash",
   },
   hero: {
-    badge: "Toshkent · Buxoro · Guliston · Navoiy — qabul davom etmoqda",
-    titleA: "Harvard, MIT, Stanford —",
-    titleB: "boshlanishi shu yerda.",
+    badge: "Toshkent · Buxoro · Guliston · Navoiy — qabul ochiq",
+    titleA: "SAT Makon —",
+    titleB: "universitetga ilk qadam.",
     sub: {
-      before: "SAT Makon — bu",
-      bold: "1500+ ball kafolati",
+      before: "Yetakchi universitetlarga intilayotganlar uchun",
+      bold: "yuqori samarali SAT va AP tayyorlovi",
       after:
-        ". Haftada 3 dars, 1.5 soatdan, 5 kishilik kichik guruhlarda. 300+ talabamiz allaqachon top universitetlarning eshigini ochdi.",
+        ". 25K+ o'quvchi bizga ishondi, 300+ talabamiz 1500+ ball oldi.",
     },
-    ctaPrimary: "Bepul mock testga yozilish",
+    ctaPrimary: "Biz bilan bog'laning",
     ctaSecondary: "Tariflarni ko'rish",
-    trust: "1100+ dan boshlasangiz · 1520 yoki bepul · 7 yillik tajriba",
+    trust: "25K+ o'quvchi · 30% — 1500+ ball · 5 filial",
     scroll: "Aylantiring",
   },
   logos: {
     eyebrow: "O'quvchilarimiz qabul qilingan universitetlar",
     industries: [
       "HARVARD",
-      "STANFORD",
-      "MIT",
       "YALE",
       "PRINCETON",
-      "BROWN",
+      "STANFORD",
       "CAMBRIDGE",
+      "BROWN",
+      "MIT",
       "CORNELL",
       "BERKELEY",
       "NYU",
@@ -58,11 +58,11 @@ const uz = {
     eyebrow: "Raqamlar bilan",
     titleA: "Natijalar gapiradi —",
     titleB: "biz sukut saqlaymiz.",
-    sub: "300+ talaba 1500+ ball oldi. Har 3-talabamiz Ivy League darajasidagi natija bilan bitiradi. Mana bizning haqiqatimiz.",
+    sub: "300+ o'quvchimiz 1500+ ball oldi. Har 3-talabamizdan 1 nafari Ivy League darajasidagi natija bilan bitiradi.",
     cards: [
       {
         label: "1500+ ballik talabalar",
-        highlight: "Talabamiz",
+        highlight: "O'quvchilarimiz",
         description:
           "1500+ ball oldi va Harvard, MIT, Stanford, Cornell, NYU darajasidagi universitetlarga ariza yo'lini ochdi.",
       },
@@ -70,13 +70,13 @@ const uz = {
         label: "Yuqori ballarning ulushi",
         highlight: "Talabalarimizning",
         description:
-          "1500+ ball bilan bitiradi — bozor bo'yicha o'rtacha ko'rsatkich 7%, biz 4 baravar yuqori turamiz.",
+          "1500+ ball bilan bitiradi — bozor o'rtachasi ~7%, biz 4 baravar yuqorida turamiz.",
       },
       {
         label: "Eng yuqori natija",
         highlight: "Mukammal natijaga",
         description:
-          "yetib bordik (1600 — maximal SAT bali). Bu — ta'lim modelimiz ishlayotganining isboti.",
+          "yetib bordik (1600 — maximal SAT bali). Ta'lim modelimiz ishlayotganining isboti.",
       },
     ],
   },
@@ -84,45 +84,45 @@ const uz = {
     eyebrow: "Tizim",
     titleA: "1520+ ballga olib boruvchi",
     titleB: "to'liq tizim.",
-    sub: "Faqat darslar emas — to'liq qabul strategiyasi. Esse tahriri, universitet tanlash, AI bilan kuchaytirilgan amaliyot — hammasi bir tizimda.",
+    sub: "Faqat darslar emas — to'liq qabul strategiyasi. Esse tekshiruvi, universitet tanlash, AI bilan kuchaytirilgan amaliyot — hammasi bir tizimda.",
     big: {
-      tag: "Kafolat",
+      tag: "Ball kafolati",
       titleBefore: "",
       titleBold: "1520+ ball",
-      titleAfter: " yoki",
+      titleAfter: " — yoki",
       titleLine2: "darslar bepul davom etadi.",
-      body: "Boshlang'ich balingiz 1100+ bo'lsa — biz 1520 va undan yuqori natijani kafolatlaymiz. Maqsadga yetmasangiz, qo'shimcha to'lovsiz davom ettiramiz — to maqsadga yetguncha.",
+      body: "Boshlang'ich balingiz 1100+ bo'lsa — biz 1520 va undan yuqori natijani yozma kafolatlaymiz. Maqsadga yetmasangiz, darslar qo'shimcha to'lovsiz davom etadi — to siz maqsadga yetguncha.",
       channels: [
         "Math 800",
         "Reading 760+",
         "Writing 760+",
-        "AI tahlil",
         "60+ mock test",
-        "Esse tahriri",
-        "Qabul strategiyasi",
+        "AI tahlili",
+        "Esse tekshiruvi",
+        "Universitet tanlash",
       ],
       timeline: {
-        leadArrives: "Boshlang'ich",
+        leadArrives: "Boshlanish",
         aiReplies: "Maqsad",
         you: "1100+ → 1520+",
-        competitors: "5 oy o'rtacha",
-        industry: "5 kishilik guruh",
+        competitors: "5 kishilik guruh",
+        industry: "Yozma shartnoma",
       },
     },
     qualifies: {
       tag: "Kichik guruh",
       title: "5 talabaga 1 ustoz.",
-      body: "O'qituvchi har bir talabaning kuchli va zaif tomonlarini shaxsan biladi. Hech kim orqada qolmaydi — bu kafolat.",
+      body: "O'qituvchi har bir o'quvchining kuchli va zaif tomonlarini shaxsan biladi. Hech kim orqada qolmaydi — bu kafolat.",
     },
     books: {
       tag: "AI platforma",
-      title: "makon.ai — 60+ amaliy test, AI tahlil.",
-      body: "Har bir savol bo'yicha AI nima qilganingizni va nimani o'rganishingiz kerakligini aytadi. 24/7 mashq, jonli mock testlar.",
+      title: "makon.ai — 60+ amaliy test, AI tahlili.",
+      body: "Har savol bo'yicha AI tutor sizga shaxsiy fikr bildiradi. 24/7 mashq, jonli mock testlar, lug'at trenajori — hammasi bir joyda.",
     },
     languages: {
       tag: "Esse va qabul",
-      title: "Esse tahriri va universitet tanlash.",
-      body: "Top maktablar uchun ta'sirchan esse va strategik tanlov. Ariza har bir ustunini qamrab olamiz — GPA, SAT, AP, qo'shimcha faoliyat.",
+      title: "Esse tekshiruvi va universitet tanlash.",
+      body: "Top maktablar uchun ta'sirchan esselar va strategik tanlov. Ariza har ustunini qamrab olamiz — GPA, SAT, AP, qo'shimcha faoliyat.",
     },
     memory: {
       tag: "Ball tahlili",
@@ -131,105 +131,105 @@ const uz = {
     },
     dfy: {
       tag: "AP tayyorlov",
-      title: "AP — universitet krediti uchun.",
-      body: "Calculus, Physics, Chemistry, Computer Science. AP 5 bali — universitet kreditiga teng. Vaqt va pul tejaysiz.",
+      title: "AP — 38+ fan, universitet krediti.",
+      body: "Calculus, Physics, Chemistry, Computer Science, Statistics, Economics va boshqa 30+ AP fanlari. AP 5 bali = universitet krediti — vaqt va pul tejaysiz.",
     },
   },
   process: {
-    eyebrow: "Yo'nalish",
-    titleA: "Uch qadam.",
-    titleB: "Bitta orzu.",
-    sub: "1100 dan 1520+ gacha — aniq harakat rejasi bilan. Tasodif yo'q, faqat tizim.",
+    eyebrow: "Yo'l",
+    titleA: "Universitetga",
+    titleB: "yo'lingiz.",
+    sub: "Yutuqli arizaning har bir ustunini qamrab olamiz. GPA → SAT/AP → Esse va profil — tizimli ravishda.",
     step: "Bosqich",
     steps: [
       {
-        chip: "1-bosqich",
-        title: "Bepul mock va tahlil.",
-        body: "Joriy darajangizni aniqlaymiz — to'liq mock test, AI tahlili, kuchli va zaif tomonlaringiz xaritasi. Bu — bepul. Yozasizmi yoki yo'q — fikrlashga asos olib ketasiz.",
+        chip: "01-bosqich",
+        title: "GPA va o'quv odatlari.",
+        body: "Strukturlangan rejalar va vaqt boshqaruvi orqali mustahkam akademik poydevor. Maktab davomida ham, undan keyin ham — bu fundament hech qachon eskirmaydi.",
       },
       {
-        chip: "2-bosqich",
-        title: "Shaxsiy o'qish rejasi.",
-        body: "Haftada 3 dars, 1.5 soatdan, 5 kishilik guruhda. Har dars Math, Reading, Writing — barchasini qamrab oladi. Uy vazifalari makon.ai da, AI sizni kuzatib boradi.",
+        chip: "02-bosqich",
+        title: "SAT va AP bali.",
+        body: "Isbotlangan metodologiya bilan top foizli SAT natijasi. Math, Reading, Writing — barcha bo'limlar. Haftada amaliy testlar va shaxsiy tahlil.",
       },
       {
-        chip: "3-bosqich",
-        title: "Mock testlar va imtihon.",
-        body: "Har 2 haftada haqiqiy mock. Kuzga tayyor — 1520+ ball bilan. Esse tahriri va qabul strategiyasi orqali Ivy League ariza paketini tugatamiz.",
+        chip: "03-bosqich",
+        title: "Esse, ariza va profil.",
+        body: "Ta'sirchan esse, ko'zga tashlanadigan ariza, qo'shimcha faoliyat profili. Top maktablar uchun strategik tanlov — Ivy League ariza paketini birga yozamiz.",
       },
     ],
   },
   testimonials: {
-    eyebrow: "Talabalar nima deyishadi",
+    eyebrow: "O'quvchilarimiz nima deyishadi",
     titleA: "Yuqori ballar,",
     titleB: "ochilgan eshiklar.",
     quotes: [
       {
         quote:
-          "1320 dan 1570 ga ko'tarildim — 5 oyda. SAT Makonsiz Cornell hech qachon bo'lmas edi. Endi men u yerdaman.",
-        name: "Kalmuxammed Z.",
-        role: "1320 → 1570 · Cornell University",
+          "Kam aka shunchaki o'qituvchi emas — mentor. 1600 olishim mumkin deb hech kim aytmagan edi, u aytdi va men oldim.",
+        name: "Muhammadmirzo X.",
+        role: "1450 → 1600 · Stanford",
       },
       {
         quote:
-          "Eng katta o'zgarish — 1420 dan 1590 gacha. Math da har savol uchun ustozim shaxsan keldi va tushuntirdi. 5 kishilik guruh haqiqiy farq qiladi.",
-        name: "Taisiia S.",
-        role: "1420 → 1590 · Stanford qabuli",
-      },
-      {
-        quote:
-          "Maktabda hech kim 1500+ olmagan edi. SAT Makonda 4 oyda 1530 oldim. Endi MIT'ga ariza beraman — bu real.",
+          "Math bo'yicha 720 dan 800 ga ko'tarildim — Kam akaning question-strategiyasi tufayli. Endi MIT da Computer Science o'qiyman.",
         name: "Madiyar N.",
-        role: "1170 → 1560 · MIT ariza",
+        role: "1380 → 1560 · MIT",
+      },
+      {
+        quote:
+          "Esse yordami va ariza strategiyasi — bu SAT'dan keyingi eng katta farq. Columbia'ga to'liq stipendiya bilan kirdim.",
+        name: "Taisiia S.",
+        role: "1420 → 1590 · Columbia",
       },
     ],
   },
   cta: {
-    eyebrow: "Ball kafolati",
-    titleA: "1520+ ball — yoki",
-    titleB: "darslar bepul.",
-    sub: "Boshlang'ich balingiz 1100+ bo'lsa, biz 1520+ ni kafolatlaymiz. Maqsadga yetmasangiz, darslar to maqsadga yetguncha bepul davom etadi. Yozma shartnoma.",
-    ctaPrimary: "Bepul mock testga yozilish",
-    ctaSecondary: "Konsultatsiya olish",
-    foot: "Bepul mock · 4 soat · Aniq AI tahlili",
+    eyebrow: "Birinchi qadam",
+    titleA: "Birinchi qadamni",
+    titleB: "bugun qo'ying.",
+    sub: "Bepul konsultatsiyada maqsadlaringiz, joriy ballingiz va sizga mos tarifni muhokama qilamiz. Yozma ravishda 1520+ kafolat — ozod qadam tashlang.",
+    ctaPrimary: "Ro'yxatdan o'ting",
+    ctaSecondary: "Bepul mock test",
+    foot: "Majburiyatsiz · 30 daqiqa · Shaxsiy tavsiyalar",
   },
   faq: {
     eyebrow: "Savollar",
     title: "Eng ko'p so'raladigan savollar.",
     items: [
       {
-        q: "SAT nima va u nega muhim?",
-        a: "SAT — AQSh va 180+ mamlakatdagi universitetlar uchun standart kirish testi. Ball 400 dan 1600 gacha. Harvard, MIT, Stanford — barchasi SAT balingizga qarab baho beradi. 1500+ ball $10,000–$70,000 stipendiya imkoniyati.",
+        q: "SAT va AP orasidagi farq nima?",
+        a: "SAT — universitetga kirish standart testi (400–1600). AP — alohida fanlar bo'yicha universitet darajasidagi imtihonlar (1–5). Ikkalasi ham arizani kuchaytiradi va katta stipendiyaga olib keladi.",
       },
       {
         q: "Ball kafolati qanday ishlaydi?",
-        a: "Boshlang'ich balingiz 1100+ bo'lsa, biz 1520 va undan yuqori natijani yozma kafolatlaymiz. Agar maqsadga yetmasangiz, darslar qo'shimcha to'lovsiz davom etadi — to siz maqsadga yetguncha.",
+        a: "Boshlang'ich balingiz 1100+ bo'lsa — biz yozma ravishda 1520 va undan yuqori natijani kafolatlaymiz. Agar maqsadga yetmasangiz, darslar qo'shimcha to'lovsiz davom etadi — to siz maqsadga yetguncha.",
       },
       {
-        q: "Qancha vaqt o'qiladi va kuniga necha soat?",
-        a: "Asosiy SAT dasturi 4–6 oy davom etadi. Haftada 3 dars, har biri 1.5 soatdan — jami 4.5 soat sinfda + uy vazifasi makon.ai da. 5 kishilik guruhda har bir talaba shaxsan diqqatga olinadi.",
+        q: "Qaysi ball bilan kursga qo'shilish mumkin?",
+        a: "Har qanday boshlang'ich ball bilan yordam bera olamiz. Bepul konsultatsiyada darajangizni baholaymiz va sizga mos tarifni — PRE-SAT, SAT yoki AP — tanlaymiz.",
+      },
+      {
+        q: "Darslar qanday formatda o'tadi?",
+        a: "Ham onlayn, ham oflayn guruhlar mavjud. 5 kishilik kichik guruhlar — har bir o'quvchi shaxsiy e'tibor oladi. O'qituvchi darsdan tashqari ham javob beradi.",
       },
       {
         q: "Filiallar qayerda joylashgan?",
-        a: "Toshkent (Novza va Yunusobod), Buxoro, Guliston (Sirdaryo), Navoiy. Yana Online format ham mavjud — butun O'zbekiston bo'ylab.",
+        a: "Toshkent (Novza va Yunusobod), Buxoro, Guliston (Sirdaryo), Navoiy. Onlayn format ham mavjud — butun O'zbekiston bo'ylab.",
       },
       {
-        q: "PRE-SAT va AP ham bormi?",
-        a: "Ha. PRE-SAT — universitetga dastlabki tayyorgarlik (sinif 9–10). AP — Calculus, Physics, Chemistry, Computer Science va boshqalar. AP 5 bali universitet krediti — vaqt va pul tejaysiz.",
-      },
-      {
-        q: "Esse va ariza yordami beriladimi?",
-        a: "Albatta. SAT Makon faqat ball emas, qabulni to'liq qamrab oladi: esse tahriri, universitet tanlash, ariza strategiyasi, qo'shimcha faoliyat profili. Ivy League ariza paketini birga yozamiz.",
+        q: "AP imtihonlari qachon va qaysi fanlar bor?",
+        a: "AP imtihonlari har yil may oyida bo'lib o'tadi — College Board sanalari bo'yicha. Tayyorgarlikni 3–4 oy oldin boshlash — eng to'g'risi. Calculus, Physics, Chemistry, Computer Science va boshqa 30+ fan mavjud.",
       },
       {
         q: "Narxi qancha?",
-        a: "Tarif, davomiylik va guruh formatiga bog'liq. Bepul konsultatsiyada darajangizni baholaymiz va sizga mos tarifni tanlaymiz. Ko'p oilalarga qulay to'lov rejalari mavjud.",
+        a: "SAT va PRE-SAT: 1 fan — 900 000 so'm, 2 fan (Math + Ingliz tili) — 1 700 000 so'm. AP Calculus: 1 000 000 so'm. Bepul konsultatsiyada to'liq shartlar va chegirmalar muhokama qilinadi.",
       },
     ],
   },
   footer: {
     blurb:
-      "SAT Makon — 1500+ ballga ixtisoslashgan SAT va AP tayyorlov markazi. 300+ talaba, 5 ta filial, 1 ta vazifa: dunyodagi top universitetlarga yo'l ochish.",
+      "SAT Makon — 1500+ ballga ixtisoslashgan SAT va AP tayyorlov markazi. 25K+ o'quvchi, 5 filial, 1 ta vazifa: dunyodagi top universitetlarga yo'l ochish.",
     location: "Toshkent · Buxoro · Guliston · Navoiy",
     cols: [
       {
@@ -244,18 +244,18 @@ const uz = {
       {
         title: "Markaz",
         links: [
-          { label: "Biz haqimizda", href: "#" },
-          { label: "Ustozlar", href: "#" },
-          { label: "Filiallar", href: "#" },
-          { label: "makon.ai", href: "#" },
+          { label: "Filiallar", href: "#footer" },
+          { label: "Ustozlar", href: "#testimonials" },
+          { label: "makon.ai", href: "https://makonbook-sat-itqub.ondigitalocean.app/sat/guest/" },
+          { label: "Bepul mock", href: "https://makonbook-sat-itqub.ondigitalocean.app/sat/guest/" },
         ],
       },
       {
         title: "Resurslar",
         links: [
-          { label: "Bepul mock", href: "#cta" },
-          { label: "60+ amaliy test", href: "#" },
+          { label: "Bepul konsultatsiya", href: "#cta" },
           { label: "Savollar", href: "#faq" },
+          { label: "Telegram kanal", href: "https://t.me/sat_makon_uz" },
         ],
       },
     ],
@@ -271,7 +271,7 @@ const uz = {
     sub: "Bu — bizning haqiqiy talabalarimiz. Haqiqiy ballar. Hech narsa bo'rttirilmagan.",
   },
   unis: {
-    eyebrow: "Talabalarimiz qabul qilingan",
+    eyebrow: "O'quvchilarimiz qabul qilingan",
     title: "Top universitetlar",
   },
 };
@@ -280,38 +280,38 @@ export type Dictionary = typeof uz;
 
 const ru: Dictionary = {
   nav: {
-    product: "Программы",
+    product: "SAT",
     howItWorks: "Процесс",
     results: "Результаты",
     pricing: "Тарифы",
     faq: "Вопросы",
-    bookAudit: "Бесплатный mock",
+    bookAudit: "Начать",
   },
   hero: {
-    badge: "Ташкент · Бухара · Гулистан · Навои — набор продолжается",
-    titleA: "Harvard, MIT, Stanford —",
-    titleB: "начинается здесь.",
+    badge: "Ташкент · Бухара · Гулистан · Навои — набор открыт",
+    titleA: "SAT Makon —",
+    titleB: "первый шаг в университет.",
     sub: {
-      before: "SAT Makon — это",
-      bold: "гарантия 1500+ балла",
+      before: "Для тех, кто стремится в ведущие университеты —",
+      bold: "высокоэффективная подготовка к SAT и AP",
       after:
-        ". 3 урока в неделю по 1.5 часа в группах из 5 человек. 300+ наших студентов уже открыли двери топ-университетов.",
+        ". 25K+ студентов нам доверились, 300+ выпускников набрали 1500+ балла.",
     },
-    ctaPrimary: "Записаться на бесплатный mock",
+    ctaPrimary: "Связаться с нами",
     ctaSecondary: "Посмотреть тарифы",
-    trust: "От 1100+ балла · 1520 или бесплатно · 7 лет опыта",
+    trust: "25K+ студентов · 30% — 1500+ балла · 5 филиалов",
     scroll: "Листайте",
   },
   logos: {
     eyebrow: "Университеты, в которые поступили наши студенты",
     industries: [
       "HARVARD",
-      "STANFORD",
-      "MIT",
       "YALE",
       "PRINCETON",
-      "BROWN",
+      "STANFORD",
       "CAMBRIDGE",
+      "BROWN",
+      "MIT",
       "CORNELL",
       "BERKELEY",
       "NYU",
@@ -321,7 +321,7 @@ const ru: Dictionary = {
     eyebrow: "В цифрах",
     titleA: "Цифры говорят —",
     titleB: "мы молчим.",
-    sub: "300+ студентов с баллом 1500+. Каждый третий выпускник — на уровне Ivy League. Это наша реальность.",
+    sub: "300+ студентов набрали 1500+ балла. Каждый третий выпускник — на уровне Ivy League.",
     cards: [
       {
         label: "Студентов с 1500+",
@@ -333,11 +333,11 @@ const ru: Dictionary = {
         label: "Доля высоких баллов",
         highlight: "Наших выпускников",
         description:
-          "заканчивают с баллом 1500+. По рынку — около 7%. Мы выше в 4 раза.",
+          "заканчивают с 1500+ баллом — это в 4 раза выше среднего по рынку (~7%).",
       },
       {
         label: "Высший результат",
-        highlight: "Дошли до",
+        highlight: "Мы дошли до",
         description:
           "идеального результата (1600 — максимум SAT). Доказательство, что наша модель работает.",
       },
@@ -349,27 +349,27 @@ const ru: Dictionary = {
     titleB: "ведущая к 1520+.",
     sub: "Не просто уроки — полная стратегия поступления. Редактура эссе, выбор университета, AI-практика — всё в одной системе.",
     big: {
-      tag: "Гарантия",
+      tag: "Гарантия балла",
       titleBefore: "",
       titleBold: "1520+ баллов",
-      titleAfter: " или",
+      titleAfter: " — или",
       titleLine2: "занятия продолжаются бесплатно.",
-      body: "Если ваш стартовый балл 1100+, мы гарантируем 1520 и выше. Если цель не достигнута — занятия продолжаются без доплаты, пока вы не возьмёте свой балл.",
+      body: "Если ваш стартовый балл 1100+, мы письменно гарантируем 1520 и выше. Если цель не достигнута — занятия продолжаются без доплаты, пока вы не возьмёте свой балл.",
       channels: [
         "Math 800",
         "Reading 760+",
         "Writing 760+",
-        "AI-анализ",
         "60+ mock-тестов",
+        "AI-анализ",
         "Редактура эссе",
-        "Стратегия поступления",
+        "Выбор вуза",
       ],
       timeline: {
         leadArrives: "Старт",
         aiReplies: "Цель",
         you: "1100+ → 1520+",
-        competitors: "5 мес. в среднем",
-        industry: "Группа из 5",
+        competitors: "Группа из 5",
+        industry: "Письменный договор",
       },
     },
     qualifies: {
@@ -380,7 +380,7 @@ const ru: Dictionary = {
     books: {
       tag: "AI-платформа",
       title: "makon.ai — 60+ практик и AI-анализ.",
-      body: "По каждому вопросу AI говорит, что вы сделали и что нужно подтянуть. Тренировка 24/7, живые mock-тесты.",
+      body: "По каждому вопросу AI-тьютор даёт персональный разбор. Тренировка 24/7, живые mock-тесты, тренажёр лексики — всё в одном.",
     },
     languages: {
       tag: "Эссе и поступление",
@@ -394,31 +394,31 @@ const ru: Dictionary = {
     },
     dfy: {
       tag: "AP-подготовка",
-      title: "AP — для университетских кредитов.",
-      body: "Calculus, Physics, Chemistry, Computer Science. AP 5 = университетский кредит. Экономите время и деньги.",
+      title: "AP — 38+ предметов, кредит вуза.",
+      body: "Calculus, Physics, Chemistry, Computer Science, Statistics, Economics и ещё 30+ AP-предметов. 5 на AP = университетский кредит — экономия времени и денег.",
     },
   },
   process: {
     eyebrow: "Маршрут",
-    titleA: "Три шага.",
-    titleB: "Одна мечта.",
-    sub: "От 1100 до 1520+ — по чёткому плану. Никакой случайности — только система.",
+    titleA: "Ваш путь",
+    titleB: "в университет.",
+    sub: "Покрываем каждый столп успешной заявки. GPA → SAT/AP → Эссе и профиль — системно.",
     step: "Этап",
     steps: [
       {
-        chip: "Этап 1",
-        title: "Бесплатный mock и анализ.",
-        body: "Определяем ваш текущий уровень — полный mock-тест, AI-анализ, карта сильных и слабых сторон. Это бесплатно. Идёте к нам или нет — уносите основу для решения.",
+        chip: "Этап 01",
+        title: "GPA и учебные привычки.",
+        body: "Структурированные планы и тайм-менеджмент строят прочный академический фундамент. Этот навык не устаревает — ни в школе, ни после.",
       },
       {
-        chip: "Этап 2",
-        title: "Личный план обучения.",
-        body: "3 урока в неделю по 1.5 часа в группе из 5 человек. Каждый урок — Math, Reading, Writing. Домашние — на makon.ai, AI ведёт вас по пути.",
+        chip: "Этап 02",
+        title: "Балл SAT и AP.",
+        body: "Проверенная методология ведёт к топ-процентному результату. Math, Reading, Writing — все секции. Еженедельные практики и личный разбор.",
       },
       {
-        chip: "Этап 3",
-        title: "Mock-тесты и экзамен.",
-        body: "Каждые 2 недели — реальный mock. К осени готовы — с баллом 1520+. Дальше — редактура эссе и стратегия поступления, готовый пакет для Ivy League.",
+        chip: "Этап 03",
+        title: "Эссе, заявка и профиль.",
+        body: "Сильное эссе, выделяющаяся заявка, профиль внеклассной деятельности. Стратегический выбор школ — пакет для Ivy League собираем вместе.",
       },
     ],
   },
@@ -429,70 +429,70 @@ const ru: Dictionary = {
     quotes: [
       {
         quote:
-          "С 1320 до 1570 — за 5 месяцев. Без SAT Makon Cornell бы никогда не случился. Сейчас я там.",
-        name: "Калмухаммед З.",
-        role: "1320 → 1570 · Cornell University",
+          "Кам ака — это не просто учитель, а ментор. Никто не говорил мне, что я могу взять 1600. Он сказал — и я взял.",
+        name: "Мухаммадмирзо Х.",
+        role: "1450 → 1600 · Stanford",
       },
       {
         quote:
-          "Самый большой скачок — с 1420 до 1590. По Math преподаватель лично разобрал каждый вопрос. Группа из 5 — это реальная разница.",
-        name: "Таисия С.",
-        role: "1420 → 1590 · Stanford приём",
-      },
-      {
-        quote:
-          "В моей школе никто не брал 1500+. В SAT Makon я взял 1530 за 4 месяца. Подаю в MIT — это реально.",
+          "По Math я поднялся с 720 до 800 — благодаря стратегии Кам аки по разбору вопросов. Сейчас я учусь в MIT на Computer Science.",
         name: "Мадияр Н.",
-        role: "1170 → 1560 · MIT заявка",
+        role: "1380 → 1560 · MIT",
+      },
+      {
+        quote:
+          "Помощь с эссе и стратегией заявки — это самая большая разница после SAT. Поступил в Columbia с полной стипендией.",
+        name: "Таисия С.",
+        role: "1420 → 1590 · Columbia",
       },
     ],
   },
   cta: {
-    eyebrow: "Гарантия балла",
-    titleA: "1520+ баллов — или",
-    titleB: "занятия бесплатно.",
-    sub: "Если ваш стартовый балл 1100+, мы гарантируем 1520+. Если цель не достигнута — занятия продолжаются бесплатно, пока вы не возьмёте свой балл. Письменный договор.",
-    ctaPrimary: "Записаться на бесплатный mock",
-    ctaSecondary: "Получить консультацию",
-    foot: "Бесплатно · 4 часа · Точный AI-анализ",
+    eyebrow: "Первый шаг",
+    titleA: "Сделайте первый шаг",
+    titleB: "сегодня.",
+    sub: "На бесплатной консультации обсудим ваши цели, текущий балл и подходящий тариф. Письменная гарантия 1520+ — шагните без рисков.",
+    ctaPrimary: "Записаться",
+    ctaSecondary: "Бесплатный mock-тест",
+    foot: "Без обязательств · 30 минут · Персональные рекомендации",
   },
   faq: {
     eyebrow: "Вопросы",
     title: "Чаще всего спрашивают.",
     items: [
       {
-        q: "Что такое SAT и почему это важно?",
-        a: "SAT — стандартизированный вступительный тест для университетов США и 180+ стран. Балл — от 400 до 1600. Harvard, MIT, Stanford — все смотрят на ваш балл SAT. 1500+ — это $10,000–$70,000 стипендии в год.",
+        q: "В чём разница между SAT и AP?",
+        a: "SAT — стандартизированный вступительный тест в университет (400–1600). AP — экзамены университетского уровня по отдельным предметам (1–5). Оба усиливают заявку и открывают путь к стипендиям.",
       },
       {
         q: "Как работает гарантия балла?",
         a: "Если стартовый балл 1100+, мы письменно гарантируем 1520 и выше. Если цель не взяли — занятия продолжаются без доплаты, пока вы её не возьмёте.",
       },
       {
-        q: "Сколько длится курс и сколько часов в неделю?",
-        a: "Основная программа SAT — 4–6 месяцев. 3 урока в неделю по 1.5 часа — 4.5 часа в классе + домашние на makon.ai. В группе из 5 каждый студент получает личное внимание.",
+        q: "С каким баллом можно записаться на курс?",
+        a: "Поможем с любым стартовым баллом. На бесплатной консультации оценим уровень и подберём тариф — PRE-SAT, SAT или AP.",
+      },
+      {
+        q: "В каком формате проходят занятия?",
+        a: "Доступны и онлайн, и офлайн группы. Малые группы по 5 человек — каждый студент получает личное внимание. Преподаватель отвечает и вне урока.",
       },
       {
         q: "Где находятся филиалы?",
-        a: "Ташкент (Новза и Юнусабад), Бухара, Гулистан (Сырдарья), Навои. Также онлайн-формат — по всему Узбекистану.",
+        a: "Ташкент (Новза и Юнусабад), Бухара, Гулистан (Сырдарья), Навои. Доступен также онлайн-формат — по всему Узбекистану.",
       },
       {
-        q: "Есть ли PRE-SAT и AP?",
-        a: "Да. PRE-SAT — предварительная подготовка к университету (9–10 классы). AP — Calculus, Physics, Chemistry, Computer Science и другие. AP 5 = университетский кредит — экономия времени и денег.",
-      },
-      {
-        q: "Помогаете ли с эссе и заявкой?",
-        a: "Конечно. SAT Makon — это не только балл, а вся приёмная воронка: редактура эссе, выбор университета, стратегия заявки, профиль внеклассной деятельности. Пакет для Ivy League пишем вместе.",
+        q: "Когда AP-экзамены и какие предметы есть?",
+        a: "AP-экзамены проходят каждый май — по датам College Board. Готовиться лучше за 3–4 месяца. Доступны Calculus, Physics, Chemistry, Computer Science и ещё 30+ предметов.",
       },
       {
         q: "Сколько стоит?",
-        a: "Зависит от тарифа, длительности и формата. На бесплатной консультации оценим уровень и подберём подходящий тариф. Для многих семей доступны удобные планы оплаты.",
+        a: "SAT и PRE-SAT: 1 предмет — 900 000 сум, 2 предмета (Math + Англ.) — 1 700 000 сум. AP Calculus: 1 000 000 сум. На бесплатной консультации обсуждаем условия и скидки.",
       },
     ],
   },
   footer: {
     blurb:
-      "SAT Makon — центр подготовки к SAT и AP, специализирующийся на 1500+ балле. 300+ студентов, 5 филиалов, 1 цель: открыть путь в топ-университеты мира.",
+      "SAT Makon — центр подготовки к SAT и AP, специализирующийся на 1500+ балле. 25K+ студентов, 5 филиалов, 1 цель: открыть путь в топ-университеты мира.",
     location: "Ташкент · Бухара · Гулистан · Навои",
     cols: [
       {
@@ -501,24 +501,24 @@ const ru: Dictionary = {
           { label: "PRE-SAT", href: "#features" },
           { label: "SAT", href: "#features" },
           { label: "AP Calculus", href: "#features" },
-          { label: "Эссе и приём", href: "#features" },
+          { label: "Эссе и поступление", href: "#features" },
         ],
       },
       {
         title: "Центр",
         links: [
-          { label: "О нас", href: "#" },
-          { label: "Преподаватели", href: "#" },
-          { label: "Филиалы", href: "#" },
-          { label: "makon.ai", href: "#" },
+          { label: "Филиалы", href: "#footer" },
+          { label: "Преподаватели", href: "#testimonials" },
+          { label: "makon.ai", href: "https://makonbook-sat-itqub.ondigitalocean.app/sat/guest/" },
+          { label: "Бесплатный mock", href: "https://makonbook-sat-itqub.ondigitalocean.app/sat/guest/" },
         ],
       },
       {
         title: "Ресурсы",
         links: [
-          { label: "Бесплатный mock", href: "#cta" },
-          { label: "60+ практик", href: "#" },
+          { label: "Бесплатная консультация", href: "#cta" },
           { label: "Вопросы", href: "#faq" },
+          { label: "Telegram-канал", href: "https://t.me/sat_makon_uz" },
         ],
       },
     ],
@@ -541,38 +541,38 @@ const ru: Dictionary = {
 
 const en: Dictionary = {
   nav: {
-    product: "Programs",
+    product: "SAT",
     howItWorks: "Process",
     results: "Results",
     pricing: "Pricing",
     faq: "FAQ",
-    bookAudit: "Free mock",
+    bookAudit: "Get started",
   },
   hero: {
     badge: "Tashkent · Bukhara · Guliston · Navoiy — enrollment open",
-    titleA: "Harvard, MIT, Stanford —",
-    titleB: "starts here.",
+    titleA: "SAT Makon —",
+    titleB: "your first step to university.",
     sub: {
-      before: "SAT Makon delivers a written",
-      bold: "1500+ score guarantee",
+      before: "For students aiming at the world's leading universities —",
+      bold: "high-performance SAT and AP prep",
       after:
-        ". 3 lessons a week, 1.5 hours each, in groups of 5. 300+ of our students already opened the door to top universities.",
+        ". 25K+ students trusted us; 300+ scored 1500+.",
     },
-    ctaPrimary: "Book your free mock",
+    ctaPrimary: "Get in touch",
     ctaSecondary: "See pricing",
-    trust: "Start at 1100+ · 1520 or it's on us · 7 years of proof",
+    trust: "25K+ students · 30% scored 1500+ · 5 branches",
     scroll: "Scroll",
   },
   logos: {
     eyebrow: "Universities our students got into",
     industries: [
       "HARVARD",
-      "STANFORD",
-      "MIT",
       "YALE",
       "PRINCETON",
-      "BROWN",
+      "STANFORD",
       "CAMBRIDGE",
+      "BROWN",
+      "MIT",
       "CORNELL",
       "BERKELEY",
       "NYU",
@@ -582,7 +582,7 @@ const en: Dictionary = {
     eyebrow: "By the numbers",
     titleA: "The numbers talk —",
     titleB: "we don't have to.",
-    sub: "300+ students scored 1500+. Every third graduate hits Ivy League level. This is our reality.",
+    sub: "300+ students scored 1500+. Every third graduate hits Ivy League level.",
     cards: [
       {
         label: "Students with 1500+",
@@ -594,7 +594,7 @@ const en: Dictionary = {
         label: "High-score share",
         highlight: "Of our graduates",
         description:
-          "leave with 1500+. The market average is around 7% — we are 4× higher.",
+          "leave with 1500+ — about 4× the market average of ~7%.",
       },
       {
         label: "Top result",
@@ -610,27 +610,27 @@ const en: Dictionary = {
     titleB: "built to deliver 1520+.",
     sub: "Not just lessons — a full admissions strategy. Essay editing, school selection, AI-powered practice — all in one system.",
     big: {
-      tag: "Guarantee",
+      tag: "Score guarantee",
       titleBefore: "",
       titleBold: "1520+ score",
-      titleAfter: " or",
+      titleAfter: " — or",
       titleLine2: "the lessons keep going free.",
-      body: "If your starting score is 1100 or above, we guarantee 1520 and higher. Don't hit it? Lessons continue at no extra cost — until you do.",
+      body: "If your starting score is 1100 or above, we guarantee 1520 and higher in writing. Don't hit it? Lessons continue at no extra cost — until you do.",
       channels: [
         "Math 800",
         "Reading 760+",
         "Writing 760+",
-        "AI analysis",
         "60+ mock tests",
+        "AI analysis",
         "Essay editing",
-        "Admissions strategy",
+        "School selection",
       ],
       timeline: {
         leadArrives: "Start",
         aiReplies: "Goal",
         you: "1100+ → 1520+",
-        competitors: "5-month average",
-        industry: "Groups of 5",
+        competitors: "Groups of 5",
+        industry: "Written agreement",
       },
     },
     qualifies: {
@@ -641,7 +641,7 @@ const en: Dictionary = {
     books: {
       tag: "AI platform",
       title: "makon.ai — 60+ practice tests, AI analysis.",
-      body: "Per-question AI feedback on what you got, what to fix. 24/7 practice, live mock tests.",
+      body: "Per-question AI tutor feedback. 24/7 practice, live mock tests, vocabulary trainer — all in one place.",
     },
     languages: {
       tag: "Essay & admissions",
@@ -655,31 +655,31 @@ const en: Dictionary = {
     },
     dfy: {
       tag: "AP prep",
-      title: "AP — for college credit.",
-      body: "Calculus, Physics, Chemistry, Computer Science. A 5 on AP equals a college credit — saving time and money.",
+      title: "AP — 38+ subjects, college credit.",
+      body: "Calculus, Physics, Chemistry, Computer Science, Statistics, Economics and 30+ more AP subjects. A 5 on AP = a college credit — saving time and money.",
     },
   },
   process: {
     eyebrow: "The path",
-    titleA: "Three steps.",
-    titleB: "One dream.",
-    sub: "From 1100 to 1520+ — by a clear plan. No luck involved, just a system.",
+    titleA: "Your path",
+    titleB: "to university.",
+    sub: "We cover every pillar of a winning application. GPA → SAT/AP → essay & profile — systematically.",
     step: "Step",
     steps: [
       {
-        chip: "Step 1",
-        title: "Free mock + diagnosis.",
-        body: "We measure where you stand today — full mock test, AI analysis, map of strengths and weak spots. It's free. Whether you sign up or not, you walk out with a real plan.",
+        chip: "Step 01",
+        title: "GPA & study habits.",
+        body: "Structured plans and time management build a rock-solid academic base. This skill ages well — through school and well beyond.",
       },
       {
-        chip: "Step 2",
-        title: "A personalized study plan.",
-        body: "3 lessons per week, 1.5 hours each, in groups of 5. Every lesson covers Math, Reading, Writing. Homework on makon.ai with AI tracking your progress.",
+        chip: "Step 02",
+        title: "SAT & AP score.",
+        body: "Proven methodology delivers top-percentile SAT results. Math, Reading, Writing — every section. Weekly practice tests and personal breakdowns.",
       },
       {
-        chip: "Step 3",
-        title: "Mock tests + the real exam.",
-        body: "Every 2 weeks, a full live mock. By fall, you're ready — 1520+. Then we wrap the Ivy League application — essays, admissions strategy, the whole package.",
+        chip: "Step 03",
+        title: "Essay, application, profile.",
+        body: "Compelling essays, a stand-out application, an extracurricular profile. Strategic school choice — we build the Ivy League package together.",
       },
     ],
   },
@@ -690,70 +690,70 @@ const en: Dictionary = {
     quotes: [
       {
         quote:
-          "1320 to 1570 — in five months. Without SAT Makon, Cornell never happens. Now I'm here.",
-        name: "Kalmuxammed Z.",
-        role: "1320 → 1570 · Cornell University",
+          "Kam aka isn't just a teacher — he's a mentor. No one told me I could hit 1600. He did. And I did.",
+        name: "Muhammadmirzo X.",
+        role: "1450 → 1600 · Stanford",
       },
       {
         quote:
-          "Biggest jump — 1420 to 1590. On Math, my teacher walked through every question with me. The 5-student group makes a real difference.",
-        name: "Taisiia S.",
-        role: "1420 → 1590 · Stanford admit",
-      },
-      {
-        quote:
-          "Nobody at my school had ever scored 1500+. At SAT Makon I hit 1530 in 4 months. Applying to MIT — and it's real.",
+          "Math went from 720 to 800 — thanks to Kam aka's question strategy. Now I'm at MIT studying Computer Science.",
         name: "Madiyar N.",
-        role: "1170 → 1560 · MIT applicant",
+        role: "1380 → 1560 · MIT",
+      },
+      {
+        quote:
+          "Essay help and admissions strategy — that's the biggest difference after the SAT. Got into Columbia with a full scholarship.",
+        name: "Taisiia S.",
+        role: "1420 → 1590 · Columbia",
       },
     ],
   },
   cta: {
-    eyebrow: "Score guarantee",
-    titleA: "1520+ — or",
-    titleB: "lessons are on us.",
-    sub: "If your starting score is 1100+, we guarantee 1520+. Don't hit it? Lessons keep going free, until you do. In writing.",
-    ctaPrimary: "Book your free mock",
-    ctaSecondary: "Get a consultation",
-    foot: "Free · 4 hours · Honest AI breakdown",
+    eyebrow: "First step",
+    titleA: "Take the first step",
+    titleB: "today.",
+    sub: "In a free consultation, we'll talk goals, your current score, and the right tier for you. A written 1520+ guarantee — step in risk-free.",
+    ctaPrimary: "Sign up",
+    ctaSecondary: "Free mock test",
+    foot: "No obligation · 30 minutes · Personalized recommendations",
   },
   faq: {
     eyebrow: "FAQ",
     title: "The questions everyone asks.",
     items: [
       {
-        q: "What is the SAT and why does it matter?",
-        a: "The SAT is the standardized admissions exam for U.S. universities and 180+ countries. Scores range from 400 to 1600. Harvard, MIT, Stanford — all weigh your score heavily. 1500+ unlocks $10,000–$70,000/year in scholarships.",
+        q: "What's the difference between SAT and AP?",
+        a: "SAT is the standardized university admissions test (400–1600). AP exams are college-level tests in individual subjects (1–5). Both strengthen your application and unlock scholarships.",
       },
       {
         q: "How does the score guarantee work?",
         a: "If your starting score is 1100+, we guarantee 1520 or higher in writing. If you don't hit the target, lessons continue at no extra cost until you do.",
       },
       {
-        q: "How long is the course and how many hours per week?",
-        a: "The main SAT program runs 4–6 months. Three 1.5-hour classes per week — 4.5 hours in class plus homework on makon.ai. Groups of 5 mean every student gets personal attention.",
+        q: "What starting score do I need?",
+        a: "We help at any starting level. The free consultation is where we measure your level and pick the right tier — PRE-SAT, SAT, or AP.",
+      },
+      {
+        q: "What's the lesson format?",
+        a: "We run both online and in-person groups. Small groups of 5 — every student gets personal attention. Teachers stay reachable outside lesson hours too.",
       },
       {
         q: "Where are your branches?",
         a: "Tashkent (Novza and Yunusobod), Bukhara, Guliston (Syrdarya), Navoiy. Online format also available across all of Uzbekistan.",
       },
       {
-        q: "Do you offer PRE-SAT and AP?",
-        a: "Yes. PRE-SAT for early university prep (grades 9–10). AP — Calculus, Physics, Chemistry, Computer Science and more. A 5 on AP equals a college credit — time and money saved.",
-      },
-      {
-        q: "Do you help with essays and applications?",
-        a: "Absolutely. SAT Makon isn't just about the score — we cover the full admissions funnel: essay editing, school selection, application strategy, extracurricular profile. We build the Ivy League package together.",
+        q: "When are AP exams and which subjects do you offer?",
+        a: "AP exams run every May, on College Board dates. Best to start prepping 3–4 months out. We offer Calculus, Physics, Chemistry, Computer Science and 30+ other subjects.",
       },
       {
         q: "How much does it cost?",
-        a: "Depends on the program, duration, and format. The free consultation is where we measure your level and pick the right tier. Friendly payment plans available for most families.",
+        a: "SAT and PRE-SAT: 1 subject — 900,000 UZS, 2 subjects (Math + English) — 1,700,000 UZS. AP Calculus: 1,000,000 UZS. The free consultation is where we walk through full terms and discounts.",
       },
     ],
   },
   footer: {
     blurb:
-      "SAT Makon — the SAT and AP prep center built around the 1500+ score. 300+ students, 5 branches, 1 mission: open the door to the world's top universities.",
+      "SAT Makon — the SAT and AP prep center built around the 1500+ score. 25K+ students, 5 branches, 1 mission: open the door to the world's top universities.",
     location: "Tashkent · Bukhara · Guliston · Navoiy",
     cols: [
       {
@@ -768,18 +768,18 @@ const en: Dictionary = {
       {
         title: "The center",
         links: [
-          { label: "About us", href: "#" },
-          { label: "Teachers", href: "#" },
-          { label: "Branches", href: "#" },
-          { label: "makon.ai", href: "#" },
+          { label: "Branches", href: "#footer" },
+          { label: "Teachers", href: "#testimonials" },
+          { label: "makon.ai", href: "https://makonbook-sat-itqub.ondigitalocean.app/sat/guest/" },
+          { label: "Free mock", href: "https://makonbook-sat-itqub.ondigitalocean.app/sat/guest/" },
         ],
       },
       {
         title: "Resources",
         links: [
-          { label: "Free mock", href: "#cta" },
-          { label: "60+ practice tests", href: "#" },
+          { label: "Free consultation", href: "#cta" },
           { label: "FAQ", href: "#faq" },
+          { label: "Telegram channel", href: "https://t.me/sat_makon_uz" },
         ],
       },
     ],

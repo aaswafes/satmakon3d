@@ -7,9 +7,9 @@ import { Reveal } from "./reveal-text";
 import { cn } from "@/lib/cn";
 
 const PHOTOS = [
-  "/students/15-mark.jpg",
-  "/students/14-taisiia.jpg",
+  "/students/20-muhammadmirzo.jpg",
   "/students/4-madiyar.jpg",
+  "/students/14-taisiia.jpg",
 ];
 
 export function Testimonials() {
