@@ -170,17 +170,45 @@ html {
 
 /* glass surfaces — solid fills replace backdrop-filter to keep scroll
    off the compositor's slow path. .glass-strong (the sticky nav) keeps
-   a small backdrop blur since it sits over the canvas. */
+   a real backdrop blur — it sits over the canvas and is the one place
+   liquid-glass actually pays for itself. */
 .glass {
   background: rgba(17, 17, 30, 0.85);
   border: 1px solid rgba(255, 247, 232, 0.06);
 }
+.light .glass {
+  background: rgba(255, 247, 232, 0.85);
+  border: 1px solid rgba(10, 10, 18, 0.06);
+}
 
+/* liquid glass — frosted, saturated, with refraction-style edges */
 .glass-strong {
-  background: rgba(10, 10, 18, 0.78);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 247, 232, 0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(24, 24, 38, 0.55) 0%,
+    rgba(17, 17, 30, 0.55) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 247, 232, 0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 10px 32px rgba(0, 0, 0, 0.22);
+}
+.light .glass-strong {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 250, 240, 0.55) 0%,
+    rgba(245, 239, 226, 0.5) 100%
+  );
+  backdrop-filter: blur(22px) saturate(180%);
+  -webkit-backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    inset 0 -1px 0 rgba(10, 10, 18, 0.05),
+    0 10px 32px rgba(10, 10, 18, 0.07);
 }
 
 /* content-visibility: skip layout/paint for offscreen sections */

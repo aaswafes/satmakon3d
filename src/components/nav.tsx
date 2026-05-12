@@ -41,7 +41,7 @@ export function Nav() {
         <div
           className={cn(
             "flex items-center justify-between gap-4 rounded-full px-4 py-2 transition-all duration-500",
-            scrolled ? "glass-strong shadow-[0_8px_30px_rgba(0,0,0,0.4)]" : "bg-transparent",
+            scrolled ? "glass-strong" : "bg-transparent",
           )}
         >
           {/* logo */}
