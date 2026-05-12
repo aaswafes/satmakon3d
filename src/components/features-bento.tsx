@@ -24,9 +24,13 @@ function Card({
         className,
       )}
     >
-      <div className="absolute inset-0 -z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-        <div className="absolute -top-1/2 -right-1/2 size-[140%] rounded-full bg-violet/10 blur-[120px]" />
-      </div>
+      <div
+        className="absolute inset-0 -z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(60% 60% at 100% 0%, rgba(123, 92, 255, 0.18) 0%, transparent 70%)",
+        }}
+      />
       <div className="relative z-10 flex h-full flex-col gap-3">
         <span className="text-[10px] font-mono uppercase tracking-[0.24em] text-bone/40">
           {tag}
@@ -147,7 +151,7 @@ export function FeaturesBento() {
   const f = t.features;
 
   return (
-    <section className="relative py-28 sm:py-36">
+    <section className="cv-auto relative py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-2xl mx-auto">
           <Reveal>

@@ -36,7 +36,7 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl w-full px-6 pt-32 pb-16 text-center pointer-events-none">
         {/* eyebrow */}
         <Reveal as="div" className="mb-6">
-          <span className="inline-flex items-center gap-2 rounded-full border border-bone/10 bg-ink/30 backdrop-blur-md px-3.5 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-bone/70">
+          <span className="inline-flex items-center gap-2 rounded-full border border-bone/10 bg-ink/75 px-3.5 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-bone/70">
             <span className="relative flex size-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-75" />
               <span className="relative inline-flex size-1.5 rounded-full bg-mint" />

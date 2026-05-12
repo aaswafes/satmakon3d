@@ -8,13 +8,16 @@ export function Cta() {
   const t = useT();
 
   return (
-    <section id="cta" className="relative py-32 sm:py-44 overflow-hidden">
-      {/* big cinematic gradient */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[1100px] rounded-full bg-violet/14 blur-[200px]" />
-        <div className="absolute left-[20%] top-[60%] size-[500px] rounded-full bg-magenta/10 blur-[160px]" />
-        <div className="absolute right-[15%] top-[20%] size-[400px] rounded-full bg-mint/8 blur-[160px]" />
-      </div>
+    <section id="cta" className="cv-auto relative py-32 sm:py-44 overflow-hidden">
+      {/* cinematic gradient — flat radial-gradients instead of giant
+          Gaussian-blurred divs, identical look at zero scroll cost */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(60% 50% at 50% 50%, rgba(123, 92, 255, 0.18) 0%, rgba(123, 92, 255, 0.05) 45%, transparent 75%), radial-gradient(35% 35% at 20% 75%, rgba(255, 91, 170, 0.14) 0%, transparent 70%), radial-gradient(30% 30% at 80% 25%, rgba(90, 240, 201, 0.10) 0%, transparent 70%)",
+        }}
+      />
 
       <div className="mx-auto max-w-5xl px-6 text-center">
         <Reveal>

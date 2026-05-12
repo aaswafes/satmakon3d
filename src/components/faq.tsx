@@ -10,7 +10,7 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-28 sm:py-36">
+    <section id="faq" className="cv-auto relative py-28 sm:py-36">
       <div className="mx-auto max-w-3xl px-6">
         <div className="text-center">
           <Reveal>

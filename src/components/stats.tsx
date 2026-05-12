@@ -67,7 +67,7 @@ export function Stats() {
   ];
 
   return (
-    <section className="relative py-28 sm:py-36">
+    <section className="cv-auto relative py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-3xl mx-auto">
           <Reveal>

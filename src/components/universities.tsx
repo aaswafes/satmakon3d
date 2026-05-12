@@ -26,7 +26,7 @@ export function Universities() {
   const doubled = [...items, ...items];
 
   return (
-    <section className="relative py-24 sm:py-28 overflow-hidden">
+    <section className="cv-auto relative py-24 sm:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="text-center">
           <span className="text-[11px] font-mono uppercase tracking-[0.28em] text-bone/40">

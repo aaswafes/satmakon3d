@@ -10,13 +10,16 @@ export function Guarantee() {
   return (
     <section
       id="features"
-      className="relative py-28 sm:py-40 overflow-hidden"
+      className="cv-auto relative py-28 sm:py-40 overflow-hidden"
     >
-      {/* big radial glow */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[900px] rounded-full bg-violet/10 blur-[180px]" />
-        <div className="absolute right-[10%] top-[10%] size-[480px] rounded-full bg-magenta/10 blur-[160px]" />
-      </div>
+      {/* radial glow — flat gradients, no Gaussian blur */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(55% 45% at 50% 50%, rgba(123, 92, 255, 0.16) 0%, rgba(123, 92, 255, 0.04) 45%, transparent 70%), radial-gradient(30% 30% at 90% 10%, rgba(255, 91, 170, 0.13) 0%, transparent 70%)",
+        }}
+      />
 
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -69,7 +72,7 @@ export function Guarantee() {
           {/* right: timeline mini-card */}
           <div className="lg:col-span-4">
             <Reveal delay={0.2}>
-              <div className="relative rounded-3xl border border-bone/10 bg-ink-2/60 backdrop-blur p-6 inset-glow">
+              <div className="relative rounded-3xl border border-bone/10 bg-ink-2/85 p-6 inset-glow">
                 <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-[0.22em] text-bone/40">
                   <span>{t.features.big.timeline.leadArrives}</span>
                   <span>{t.features.big.timeline.aiReplies}</span>

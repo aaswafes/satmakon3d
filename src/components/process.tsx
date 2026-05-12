@@ -103,7 +103,7 @@ export function Process() {
               key={i}
               className="shrink-0 w-[78vw] max-w-[640px] mr-8 lg:mr-16"
             >
-              <div className="relative rounded-[28px] border border-bone/10 bg-ink-2/80 backdrop-blur p-10 lg:p-14 min-h-[60vh] inset-glow overflow-hidden">
+              <div className="relative rounded-[28px] border border-bone/10 bg-ink-2/92 p-10 lg:p-14 min-h-[60vh] inset-glow overflow-hidden">
                 {/* step number */}
                 <div className="absolute -top-8 -right-6 font-display text-[16rem] leading-none tracking-[-0.08em] text-bone/[0.04] select-none pointer-events-none">
                   {i + 1}

@@ -8,7 +8,7 @@ export function LanguageSwitcher() {
   const { locale, setLocale } = useLocale();
 
   return (
-    <div className="inline-flex items-center rounded-full border border-bone/10 bg-ink/40 backdrop-blur p-0.5">
+    <div className="inline-flex items-center rounded-full border border-bone/10 bg-ink/80 p-0.5">
       {LOCALES.map((l) => (
         <button
           key={l}

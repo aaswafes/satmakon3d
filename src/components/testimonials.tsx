@@ -24,9 +24,15 @@ export function Testimonials() {
   }, [t.testimonials.quotes.length]);
 
   return (
-    <section id="testimonials" className="relative py-28 sm:py-36 overflow-hidden">
-      {/* glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[700px] rounded-full bg-magenta/8 blur-[160px] -z-10" />
+    <section id="testimonials" className="cv-auto relative py-28 sm:py-36 overflow-hidden">
+      {/* glow — flat radial-gradient layer */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(45% 40% at 50% 50%, rgba(255, 91, 170, 0.12) 0%, rgba(255, 91, 170, 0.03) 45%, transparent 75%)",
+        }}
+      />
 
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">

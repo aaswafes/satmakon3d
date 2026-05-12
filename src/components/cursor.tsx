@@ -66,7 +66,7 @@ export function Cursor() {
       <div
         ref={dotRef}
         aria-hidden
-        className="hidden md:block fixed top-0 left-0 z-[100] -translate-x-1/2 -translate-y-1/2 size-1.5 rounded-full bg-bone pointer-events-none mix-blend-difference"
+        className="hidden md:block fixed top-0 left-0 z-[100] -translate-x-1/2 -translate-y-1/2 size-1.5 rounded-full bg-bone pointer-events-none"
       />
       <div
         ref={ringRef}
