@@ -58,7 +58,7 @@ export function Universities() {
                   width={140}
                   height={64}
                   className="h-full w-auto object-contain brightness-0 invert"
-                  priority={i < 6}
+                  loading={i < 2 ? "eager" : "lazy"}
                 />
               </div>
             ) : (

@@ -30,7 +30,7 @@ export function Process() {
           trigger: section,
           start: "top top",
           end: () => `+=${totalScroll + window.innerHeight * 0.4}`,
-          scrub: 0.6,
+          scrub: 0.3,
           pin: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,

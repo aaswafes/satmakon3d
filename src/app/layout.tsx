@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader, JetBrains_Mono } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { LocaleProvider } from "@/lib/locale-context";
+import { Splash } from "@/components/splash";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -13,15 +14,8 @@ const inter = Inter({
 const newsreader = Newsreader({
   variable: "--font-newsreader",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const jbMono = JetBrains_Mono({
-  variable: "--font-jb-mono",
-  subsets: ["latin"],
   weight: ["400", "500"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -57,9 +51,10 @@ export default function RootLayout({
   return (
     <html
       lang="uz"
-      className={`${inter.variable} ${newsreader.variable} ${jbMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${newsreader.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink text-cream">
+        <Splash />
         <SmoothScroll />
         <LocaleProvider>
           {children}
