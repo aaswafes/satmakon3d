@@ -62,25 +62,25 @@ function Eye({
     <group position={position}>
       {/* black eye patch (squashed oval, sits on face) */}
       <mesh position={[flip ? 0.04 : -0.04, -0.02, 0]} scale={[0.62, 0.78, 0.32]}>
-        <sphereGeometry args={[0.55, 32, 32]} />
+        <sphereGeometry args={[0.55, 18, 18]} />
         <meshToonMaterial color="#0A0A12" gradientMap={toon} />
       </mesh>
 
       {/* sclera (white, slightly recessed into the patch) */}
       <mesh position={[0, 0, 0.18]}>
-        <sphereGeometry args={[0.27, 32, 32]} />
+        <sphereGeometry args={[0.27, 18, 18]} />
         <meshToonMaterial color="#FFF7E8" gradientMap={toon} />
       </mesh>
 
       {/* pupil — tracks cursor */}
       <group ref={pupilRef} position={[0, 0, 0.34]}>
         <mesh>
-          <sphereGeometry args={[0.2, 32, 32]} />
+          <sphereGeometry args={[0.2, 18, 18]} />
           <meshToonMaterial color="#0A0A12" gradientMap={toon} />
         </mesh>
         {/* large highlight (top-right) */}
         <mesh position={[0.07, 0.08, 0.14]}>
-          <sphereGeometry args={[0.07, 24, 24]} />
+          <sphereGeometry args={[0.07, 14, 14]} />
           <meshBasicMaterial color="#FFFFFF" toneMapped={false} />
         </mesh>
         {/* tiny secondary highlight */}
@@ -160,13 +160,13 @@ export function Panda({ scale = 1 }: { scale?: number }) {
       <group position={[0, -1.55, 0]}>
         {/* black outer body — rounded blob */}
         <mesh position={[0, 0, 0]} scale={[1.55, 1.45, 1.25]}>
-          <sphereGeometry args={[1, 48, 48]} />
+          <sphereGeometry args={[1, 22, 22]} />
           <meshToonMaterial color="#16161E" gradientMap={toon} />
         </mesh>
 
         {/* gray belly patch — slightly forward */}
         <mesh position={[0, -0.05, 0.7]} scale={[1.05, 1.05, 0.55]}>
-          <sphereGeometry args={[0.85, 48, 48]} />
+          <sphereGeometry args={[0.85, 22, 22]} />
           <meshToonMaterial color="#C7C2BA" gradientMap={toon} />
         </mesh>
 
@@ -179,7 +179,7 @@ export function Panda({ scale = 1 }: { scale?: number }) {
 
       {/* ------------------------- LEFT PAW (resting) ------------------------- */}
       <group position={[-1.05, -1.7, 0.85]} rotation={[0, 0, 0.35]}>
-        <RoundedBox args={[0.55, 0.5, 0.55]} radius={0.22} smoothness={4}>
+        <RoundedBox args={[0.55, 0.5, 0.55]} radius={0.22} smoothness={2}>
           <meshToonMaterial color="#0E0E18" gradientMap={toon} />
         </RoundedBox>
       </group>
@@ -188,17 +188,17 @@ export function Panda({ scale = 1 }: { scale?: number }) {
       <group ref={wavingPaw} position={[1.4, -0.3, 0.4]} rotation={[0, 0, -0.25]}>
         {/* upper arm */}
         <mesh position={[0.22, -0.1, 0]} rotation={[0, 0, -0.35]} scale={[0.55, 0.85, 0.55]}>
-          <sphereGeometry args={[0.5, 32, 32]} />
+          <sphereGeometry args={[0.5, 18, 18]} />
           <meshToonMaterial color="#16161E" gradientMap={toon} />
         </mesh>
         {/* paw end */}
         <group position={[0.6, 0.55, 0.05]}>
-          <RoundedBox args={[0.6, 0.62, 0.45]} radius={0.22} smoothness={4}>
+          <RoundedBox args={[0.6, 0.62, 0.45]} radius={0.22} smoothness={2}>
             <meshToonMaterial color="#0E0E18" gradientMap={toon} />
           </RoundedBox>
           {/* paw pads (cream beans on palm) */}
           <mesh position={[0, -0.05, 0.25]} scale={[0.7, 0.5, 0.4]}>
-            <sphereGeometry args={[0.18, 24, 24]} />
+            <sphereGeometry args={[0.18, 14, 14]} />
             <meshToonMaterial color="#F4EBDD" gradientMap={toon} />
           </mesh>
           <mesh position={[-0.18, 0.18, 0.25]} scale={[0.32, 0.32, 0.3]}>
@@ -220,29 +220,29 @@ export function Panda({ scale = 1 }: { scale?: number }) {
       <group ref={head} position={[0, 0.4, 0]}>
         {/* head shape — slightly squished sphere */}
         <mesh scale={[1.5, 1.4, 1.4]}>
-          <sphereGeometry args={[1, 64, 64]} />
+          <sphereGeometry args={[1, 28, 28]} />
           <meshToonMaterial color="#FFF7E8" gradientMap={toon} />
         </mesh>
 
         {/* ears */}
         <group position={[-1.05, 0.95, 0]} rotation={[0, 0, -0.15]}>
           <mesh scale={[0.55, 0.55, 0.5]}>
-            <sphereGeometry args={[0.6, 32, 32]} />
+            <sphereGeometry args={[0.6, 18, 18]} />
             <meshToonMaterial color="#0E0E18" gradientMap={toon} />
           </mesh>
           {/* inner ear (cream) */}
           <mesh position={[0, 0, 0.18]} scale={[0.32, 0.32, 0.18]}>
-            <sphereGeometry args={[0.5, 24, 24]} />
+            <sphereGeometry args={[0.5, 14, 14]} />
             <meshToonMaterial color="#3A2A2E" gradientMap={toon} />
           </mesh>
         </group>
         <group position={[1.05, 0.95, 0]} rotation={[0, 0, 0.15]}>
           <mesh scale={[0.55, 0.55, 0.5]}>
-            <sphereGeometry args={[0.6, 32, 32]} />
+            <sphereGeometry args={[0.6, 18, 18]} />
             <meshToonMaterial color="#0E0E18" gradientMap={toon} />
           </mesh>
           <mesh position={[0, 0, 0.18]} scale={[0.32, 0.32, 0.18]}>
-            <sphereGeometry args={[0.5, 24, 24]} />
+            <sphereGeometry args={[0.5, 14, 14]} />
             <meshToonMaterial color="#3A2A2E" gradientMap={toon} />
           </mesh>
         </group>
@@ -253,7 +253,7 @@ export function Panda({ scale = 1 }: { scale?: number }) {
 
         {/* nose */}
         <mesh position={[0, -0.25, 1.32]} scale={[1.1, 0.85, 0.85]}>
-          <sphereGeometry args={[0.11, 24, 24]} />
+          <sphereGeometry args={[0.11, 14, 14]} />
           <meshToonMaterial color="#1A1A22" gradientMap={toon} />
         </mesh>
 

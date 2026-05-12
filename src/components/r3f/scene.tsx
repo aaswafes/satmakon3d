@@ -1,19 +1,13 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { EffectComposer, Bloom, Vignette, ChromaticAberration } from "@react-three/postprocessing";
+import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
-import * as THREE from "three";
 import { Aurora } from "./aurora";
 import { Rays } from "./rays";
 import { Panda } from "./panda";
 
-/**
- * Quick probe — returns true only if the browser will actually give us
- * a WebGL context. Some setups (broken GPU sandbox, hardware accel off)
- * will throw a runtime error otherwise and crash the whole page.
- */
 function hasWebGL(): boolean {
   if (typeof window === "undefined") return false;
   try {
@@ -28,9 +22,6 @@ function hasWebGL(): boolean {
   }
 }
 
-/* CSS-only fallback — runs when WebGL is unavailable. Keeps the hero
- * looking intentional (gradient + grain) instead of a blank canvas
- * or crash overlay. */
 function FallbackBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden">
@@ -49,10 +40,13 @@ function FallbackBackground() {
 }
 
 export function HeroScene() {
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const [supported, setSupported] = useState<boolean | null>(null);
   const [crashed, setCrashed] = useState(false);
   const [reduced, setReduced] = useState(false);
   const [scale, setScale] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
+  const [inView, setInView] = useState(true);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -62,13 +56,13 @@ export function HeroScene() {
     setReduced(mq.matches);
 
     const onResize = () => {
-      setScale(window.innerWidth < 768 ? 0.7 : 1);
+      const w = window.innerWidth;
+      setIsMobile(w < 768);
+      setScale(w < 768 ? 0.7 : 1);
     };
     onResize();
     window.addEventListener("resize", onResize);
 
-    // Listen for a webgl context loss event globally — if the browser
-    // kills the GPU process mid-session, fall back gracefully.
     const onLost = () => setCrashed(true);
     window.addEventListener("webglcontextlost", onLost);
 
@@ -78,62 +72,78 @@ export function HeroScene() {
     };
   }, []);
 
+  // pause the canvas entirely when the hero is scrolled offscreen —
+  // this is the single biggest perf win: we stop drawing 60fps when
+  // nothing's visible.
+  useEffect(() => {
+    const el = wrapperRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { rootMargin: "120px 0px 120px 0px", threshold: 0 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   if (supported === null) return <div className="absolute inset-0 bg-ink" />;
   if (!supported || crashed) return <FallbackBackground />;
 
+  // mobile: skip post-FX entirely (Bloom + Vignette on small screens
+  // costs as much as it does on desktop but the visual delta is tiny).
+  const enablePostFX = !reduced && !isMobile;
+
   return (
-    <Canvas
-      dpr={[1, 1.75]}
-      gl={{
-        antialias: true,
-        alpha: true,
-        powerPreference: "high-performance",
-        failIfMajorPerformanceCaveat: false,
-      }}
-      camera={{ position: [0, 0.3, 6], fov: 38 }}
-      style={{ width: "100%", height: "100%" }}
-      onCreated={({ gl }) => {
-        gl.domElement.addEventListener("webglcontextlost", (e) => {
-          e.preventDefault();
-          setCrashed(true);
-        });
-      }}
-      fallback={<FallbackBackground />}
-    >
-      <color attach="background" args={["#0A0A12"]} />
+    <div ref={wrapperRef} className="absolute inset-0">
+      <Canvas
+        frameloop={inView ? "always" : "never"}
+        dpr={[1, isMobile ? 1.25 : 1.5]}
+        gl={{
+          antialias: !isMobile,
+          alpha: true,
+          powerPreference: "high-performance",
+          failIfMajorPerformanceCaveat: false,
+        }}
+        camera={{ position: [0, 0.3, 6], fov: 38 }}
+        style={{ width: "100%", height: "100%" }}
+        onCreated={({ gl }) => {
+          gl.domElement.addEventListener("webglcontextlost", (e) => {
+            e.preventDefault();
+            setCrashed(true);
+          });
+        }}
+        fallback={<FallbackBackground />}
+      >
+        <color attach="background" args={["#0A0A12"]} />
 
-      <ambientLight intensity={0.55} />
-      <directionalLight position={[-3, 4, 5]} intensity={1.4} color="#FFF7E8" />
-      <directionalLight position={[5, -2, 3]} intensity={0.6} color="#FF8DC4" />
-      <directionalLight position={[0, -5, 4]} intensity={0.3} color="#7B5CFF" />
+        <ambientLight intensity={0.55} />
+        <directionalLight position={[-3, 4, 5]} intensity={1.4} color="#FFF7E8" />
+        <directionalLight position={[5, -2, 3]} intensity={0.6} color="#FF8DC4" />
+        <directionalLight position={[0, -5, 4]} intensity={0.3} color="#7B5CFF" />
 
-      <Suspense fallback={null}>
-        <Aurora />
-        <Rays />
-        <Panda scale={scale} />
-      </Suspense>
+        <Suspense fallback={null}>
+          <Aurora />
+          <Rays />
+          <Panda scale={scale} />
+        </Suspense>
 
-      {!reduced && (
-        <EffectComposer>
-          <Bloom
-            intensity={0.6}
-            luminanceThreshold={0.6}
-            luminanceSmoothing={0.7}
-            mipmapBlur
-          />
-          <ChromaticAberration
-            offset={new THREE.Vector2(0.0008, 0.0008)}
-            radialModulation={false}
-            modulationOffset={0}
-          />
-          <Vignette
-            eskil={false}
-            offset={0.2}
-            darkness={0.6}
-            blendFunction={BlendFunction.NORMAL}
-          />
-        </EffectComposer>
-      )}
-    </Canvas>
+        {enablePostFX && (
+          <EffectComposer multisampling={0}>
+            <Bloom
+              intensity={0.45}
+              luminanceThreshold={0.7}
+              luminanceSmoothing={0.6}
+              mipmapBlur={false}
+            />
+            <Vignette
+              eskil={false}
+              offset={0.2}
+              darkness={0.55}
+              blendFunction={BlendFunction.NORMAL}
+            />
+          </EffectComposer>
+        )}
+      </Canvas>
+    </div>
   );
 }
