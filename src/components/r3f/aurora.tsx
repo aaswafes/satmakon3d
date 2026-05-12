@@ -1,8 +1,10 @@
 "use client";
 
-import { useRef, useMemo } from "react";
+import { useRef, useMemo, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
+
+type Theme = "light" | "dark";
 
 const VERT = /* glsl */ `
   varying vec2 vUv;
@@ -60,7 +62,7 @@ const FRAG = /* glsl */ `
   }
 `;
 
-export function Aurora() {
+export function Aurora({ theme = "dark" }: { theme?: Theme }) {
   const matRef = useRef<THREE.ShaderMaterial>(null);
 
   const uniforms = useMemo(
@@ -71,6 +73,18 @@ export function Aurora() {
     }),
     [],
   );
+
+  // re-tint when the user flips the theme mid-session
+  useEffect(() => {
+    if (!matRef.current) return;
+    if (theme === "light") {
+      uniforms.uColorBg.value.set("#F5EFE2");
+      uniforms.uColorA.value.set("#9B82FF");
+    } else {
+      uniforms.uColorBg.value.set("#0A0A12");
+      uniforms.uColorA.value.set("#7B5CFF");
+    }
+  }, [theme, uniforms]);
 
   useFrame((state) => {
     if (matRef.current) {

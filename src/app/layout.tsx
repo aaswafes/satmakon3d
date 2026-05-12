@@ -3,6 +3,7 @@ import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { LocaleProvider } from "@/lib/locale-context";
+import { ThemeProvider } from "@/lib/theme-context";
 import { Splash } from "@/components/splash";
 
 const inter = Inter({
@@ -43,6 +44,22 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
+/* Inline script runs BEFORE React hydrates and applies the right
+ * theme class on <html> so there's no light-mode flash on a dark-mode
+ * user (or vice versa). Reads localStorage first, falls back to
+ * system preference. */
+const themeInitScript = `
+try {
+  var t = localStorage.getItem("satmakon.theme");
+  if (!t) {
+    t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  }
+  if (t === "light") {
+    document.documentElement.classList.add("light");
+  }
+} catch (e) {}
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,13 +70,18 @@ export default function RootLayout({
       lang="uz"
       className={`${inter.variable} ${newsreader.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full bg-ink text-cream">
-        <Splash />
-        <SmoothScroll />
-        <LocaleProvider>
-          {children}
-          <div className="grain" aria-hidden />
-        </LocaleProvider>
+        <ThemeProvider>
+          <Splash />
+          <SmoothScroll />
+          <LocaleProvider>
+            {children}
+            <div className="grain" aria-hidden />
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

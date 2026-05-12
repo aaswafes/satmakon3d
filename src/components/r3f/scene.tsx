@@ -4,6 +4,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Aurora } from "./aurora";
 import { Panda } from "./panda";
+import { useTheme } from "@/lib/theme-context";
 
 function hasWebGL(): boolean {
   if (typeof window === "undefined") return false;
@@ -38,6 +39,7 @@ function FallbackBackground() {
 
 export function HeroScene() {
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
   const [supported, setSupported] = useState<boolean | null>(null);
   const [crashed, setCrashed] = useState(false);
   const [scale, setScale] = useState(1);
@@ -101,7 +103,7 @@ export function HeroScene() {
         }}
         fallback={<FallbackBackground />}
       >
-        <color attach="background" args={["#0A0A12"]} />
+        <color attach="background" args={[theme === "light" ? "#F5EFE2" : "#0A0A12"]} />
 
         <ambientLight intensity={0.55} />
         <directionalLight position={[-3, 4, 5]} intensity={1.4} color="#FFF7E8" />
@@ -109,7 +111,7 @@ export function HeroScene() {
         <directionalLight position={[0, -5, 4]} intensity={0.3} color="#7B5CFF" />
 
         <Suspense fallback={null}>
-          <Aurora />
+          <Aurora theme={theme} />
           <Panda scale={scale} />
         </Suspense>
       </Canvas>

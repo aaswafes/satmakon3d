@@ -7,6 +7,7 @@
    ========================================================= */
 
 :root {
+  /* dark mode (default) */
   --ink: #0A0A12;
   --ink-2: #11111E;
   --ink-3: #181826;
@@ -32,6 +33,32 @@
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* light mode — flip ink<->cream so every existing utility class
+   (bg-ink, text-bone, border-bone/10 etc.) recolors automatically. */
+.light {
+  --ink: #F5EFE2;       /* warm cream — page background */
+  --ink-2: #FAF6EE;     /* slightly lighter card */
+  --ink-3: #FFFFFF;     /* lightest surface */
+
+  --cream: #1A1A22;     /* used as text on light bg */
+  --cream-2: #2A2A3A;
+  --bone: #0A0A12;      /* primary text */
+
+  --violet: #5238C9;
+  --violet-2: #6A4DDC;
+  --violet-deep: #2C1875;
+
+  --magenta: #C9407F;
+  --magenta-2: #D86399;
+
+  --mint: #2EA989;
+  --mint-2: #4DC2A3;
+
+  --pink: #D49AAF;
+
+  --grain-opacity: 0.05;
 }
 
 @theme inline {
@@ -160,6 +187,22 @@ html {
 .cv-auto {
   content-visibility: auto;
   contain-intrinsic-size: 1px 900px;
+}
+
+/* hero canvas edge vignette — themed via classes so it adapts on toggle */
+.hero-vignette {
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 45%,
+    transparent 30%,
+    rgba(10, 10, 18, 0.55) 100%
+  );
+}
+.light .hero-vignette {
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 45%,
+    transparent 30%,
+    rgba(245, 239, 226, 0.55) 100%
+  );
 }
 
 /* soft inner glow */

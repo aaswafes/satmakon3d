@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useT } from "@/lib/locale-context";
 import { LanguageSwitcher } from "./language-switcher";
+import { ThemeToggle } from "./theme-toggle";
 import { MagneticButton } from "./magnetic-button";
 import { cn } from "@/lib/cn";
 
@@ -71,6 +72,7 @@ export function Nav() {
             <div className="hidden sm:block">
               <LanguageSwitcher />
             </div>
+            <ThemeToggle />
             <MagneticButton href="#cta" variant="primary" size="md">
               {t.nav.bookAudit}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
