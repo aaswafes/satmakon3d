@@ -9,12 +9,10 @@ import { Testimonials } from "@/components/testimonials";
 import { Cta } from "@/components/cta";
 import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
-import { Cursor } from "@/components/cursor";
 
 export default function Home() {
   return (
     <>
-      <Cursor />
       <Nav />
       <main>
         <Hero />
