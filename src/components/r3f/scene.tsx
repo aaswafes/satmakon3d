@@ -2,10 +2,7 @@
 
 import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { EffectComposer, Bloom, Vignette } from "@react-three/postprocessing";
-import { BlendFunction } from "postprocessing";
 import { Aurora } from "./aurora";
-import { Rays } from "./rays";
 import { Panda } from "./panda";
 
 function hasWebGL(): boolean {
@@ -43,7 +40,6 @@ export function HeroScene() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [supported, setSupported] = useState<boolean | null>(null);
   const [crashed, setCrashed] = useState(false);
-  const [reduced, setReduced] = useState(false);
   const [scale, setScale] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
   const [inView, setInView] = useState(true);
@@ -51,9 +47,6 @@ export function HeroScene() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     setSupported(hasWebGL());
-
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(mq.matches);
 
     const onResize = () => {
       const w = window.innerWidth;
@@ -72,9 +65,7 @@ export function HeroScene() {
     };
   }, []);
 
-  // pause the canvas entirely when the hero is scrolled offscreen —
-  // this is the single biggest perf win: we stop drawing 60fps when
-  // nothing's visible.
+  // pause the canvas entirely when the hero is scrolled offscreen
   useEffect(() => {
     const el = wrapperRef.current;
     if (!el) return;
@@ -88,10 +79,6 @@ export function HeroScene() {
 
   if (supported === null) return <div className="absolute inset-0 bg-ink" />;
   if (!supported || crashed) return <FallbackBackground />;
-
-  // mobile: skip post-FX entirely (Bloom + Vignette on small screens
-  // costs as much as it does on desktop but the visual delta is tiny).
-  const enablePostFX = !reduced && !isMobile;
 
   return (
     <div ref={wrapperRef} className="absolute inset-0">
@@ -123,26 +110,8 @@ export function HeroScene() {
 
         <Suspense fallback={null}>
           <Aurora />
-          <Rays />
           <Panda scale={scale} />
         </Suspense>
-
-        {enablePostFX && (
-          <EffectComposer multisampling={0}>
-            <Bloom
-              intensity={0.45}
-              luminanceThreshold={0.7}
-              luminanceSmoothing={0.6}
-              mipmapBlur={false}
-            />
-            <Vignette
-              eskil={false}
-              offset={0.2}
-              darkness={0.55}
-              blendFunction={BlendFunction.NORMAL}
-            />
-          </EffectComposer>
-        )}
       </Canvas>
     </div>
   );

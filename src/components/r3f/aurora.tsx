@@ -12,16 +12,15 @@ const VERT = /* glsl */ `
   }
 `;
 
+/* Single-noise, two-color aurora. ~3x lighter than the original
+ * three-octave shader, identical readability against the dark hero. */
 const FRAG = /* glsl */ `
   precision highp float;
   varying vec2 vUv;
   uniform float uTime;
-  uniform vec3 uColorA;
-  uniform vec3 uColorB;
-  uniform vec3 uColorC;
   uniform vec3 uColorBg;
+  uniform vec3 uColorA;
 
-  // simplex noise (Ashima)
   vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
   vec2 mod289(vec2 x){return x-floor(x*(1.0/289.0))*289.0;}
   vec3 permute(vec3 x){return mod289(((x*34.0)+1.0)*x);}
@@ -47,21 +46,12 @@ const FRAG = /* glsl */ `
 
   void main() {
     vec2 uv = vUv;
-    float t = uTime * 0.05;
-    // big slow swirling field
-    float n1 = snoise(uv * 1.7 + vec2(t, t * 0.6));
-    float n2 = snoise(uv * 3.2 - vec2(t * 0.7, t * 1.1) + n1);
-    float n3 = snoise(uv * 0.9 + vec2(-t * 0.4, t * 0.3));
-
-    float a = smoothstep(0.0, 1.0, 0.5 + 0.5 * n1);
-    float b = smoothstep(0.0, 1.0, 0.5 + 0.5 * n2);
-    float c = smoothstep(0.0, 1.0, 0.5 + 0.5 * n3);
-
+    float t = uTime * 0.02;
+    float n = snoise(uv * 1.6 + vec2(t, t * 0.7));
+    float a = smoothstep(0.0, 1.0, 0.5 + 0.5 * n);
     vec3 color = mix(uColorBg, uColorA, a * 0.55);
-    color = mix(color, uColorB, b * 0.5);
-    color = mix(color, uColorC, c * 0.35);
 
-    // vignette darken edges
+    // edge vignette
     vec2 d = uv - 0.5;
     float vig = smoothstep(0.85, 0.2, length(d));
     color *= vig;
@@ -77,9 +67,7 @@ export function Aurora() {
     () => ({
       uTime: { value: 0 },
       uColorBg: { value: new THREE.Color("#0A0A12") },
-      uColorA: { value: new THREE.Color("#4B31C9") },
-      uColorB: { value: new THREE.Color("#FF5BAA") },
-      uColorC: { value: new THREE.Color("#5AF0C9") },
+      uColorA: { value: new THREE.Color("#7B5CFF") },
     }),
     [],
   );

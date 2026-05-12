@@ -23,6 +23,16 @@ export function Hero() {
         <HeroScene />
       </div>
 
+      {/* static CSS vignette — replaces the postFX Vignette pass for zero per-frame cost */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-[6] pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 70% at 50% 45%, transparent 30%, rgba(10, 10, 18, 0.55) 100%)",
+        }}
+      />
+
       {/* dot grid overlay for texture */}
       <div className="absolute inset-0 -z-[5] dotgrid opacity-30 pointer-events-none" />
 
